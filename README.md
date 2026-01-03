@@ -1,79 +1,76 @@
 # LinearRegression
-📌 Project Overview
-This project is a beginner-level end-to-end Machine Learning regression project built using scikit-learn.
-The goal is to predict sales based on advertising expenditure across different channels and understand model selection, evaluation, and deployment in a practical ML workflow.
+# 📊 Advertising Sales Prediction using Machine Learning
 
-🎯 Objective
-To compare multiple regression models and select the best-performing and most robust model based on evaluation metrics and model complexity.
+## 📌 Project Overview
+This project demonstrates an **end-to-end machine learning regression workflow** using **scikit-learn**.  
+The goal is to build and compare multiple regression models to predict **sales based on advertising spending** across different channels, and then choose the best model based on performance and robustness. :contentReference[oaicite:1]{index=1}
 
-🧰 Tools & Technologies
-Python
 
-Pandas, NumPy
+## 🎯 Objective
+To train several regression models, evaluate them using appropriate metrics, and select the **best-performing model** that balances accuracy and simplicity.
 
-Matplotlib, Seaborn
 
-scikit-learn
+## 🧰 Tools & Technologies
+- **Python**
+- **scikit-learn** − ML training and evaluation  
+- **Pandas & NumPy** − Data handling  
+- **Matplotlib & Seaborn** − Visualizations  
+- **joblib** − Model saving for deployment :contentReference[oaicite:2]{index=2}
 
-joblib
 
-The dataset contains advertising spend across three channels:
-TV
+## 📂 Dataset
+The dataset (`Advertising.csv`) contains advertising spend (in thousands of dollars) across:
+- **TV**
+- **Radio**
+- **Newspaper**
 
-Radio
+Target variable:
+- **Sales**
 
-Newspaper
+Total records: **200** :contentReference[oaicite:3]{index=3}
 
-Target variable:Sales
 
-Total records: 200
+## 📈 Project Workflow
+1. Exploratory data analysis  
+2. Train-test split  
+3. Train multiple regression models  
+4. Evaluate models using **MAE, MSE, RMSE**  
+5. Visual comparison with graphs  
+6. Select best model based on performance  
+7. Save model for deployment :contentReference[oaicite:4]{index=4}
 
-🔍 Project Workflow
 
-Data loading and exploration
+## 🤖 Implemented Models
+- **Linear Regression**  
+- **Polynomial Regression** (degree tuning)  
+- **Lasso Regression** (L1 regularization)  
+- **Ridge Regression** (L2 regularization with cross-validation) :contentReference[oaicite:5]{index=5}
 
-Visual analysis of advertising channels vs sales
 
-Train-test split (70% training, 30% testing)
+## 📊 Model Evaluation & Selection
+- Models were compared using training and test error metrics.  
+- **Graphs** were used to inspect whether models were overfitting or underfitting.  
+- Polynomial regression (degree 3) achieved low errors, but **Ridge Regression** was chosen because it offered equally strong performance **with better generalization and lower complexity**. :contentReference[oaicite:6]{index=6}
 
-Feature scaling using StandardScaler
 
-Training multiple regression models
+## 🚀 Deployment
+The final trained model and feature transformer are saved as `.joblib` files:
+- `AdvertisementModel.joblib`  
+- `final_polynomial_converter.joblib`  
 
-Model evaluation using MAE, MSE, and RMSE
+These can be loaded later for making new predictions. :contentReference[oaicite:7]{index=7}
 
-Model comparison and selection
 
-Saving the final model for deployment
+## 🧠 Key Learnings
+- Comparing multiple models helps find the right balance between accuracy and robustness  
+- Visualization is essential for diagnosing underfitting and overfitting  
+- Deployment (model saving) is a vital part of real-world ML pipelines
 
-🤖 Models Implemented
 
-Linear Regression
+## 📌 Project Level
+**Beginner | Practical ML Workflow | scikit-learn** :contentReference[oaicite:8]{index=8}
 
-Polynomial Regression (degree tuning)
 
-Lasso Regression (L1 regularization)
+### ⭐ Feedback & Contributions
+Feedback, suggestions, and improvements are welcome!
 
-Ridge Regression (L2 regularization with cross-validation)
-
-📊 Model Evaluation & Selection
-
-Training and test errors were compared for all models
-
-Training vs Test error graphs were used to identify overfitting and underfitting
-
-Polynomial Regression (degree 3) achieved very low error
-
-Ridge Regression showed nearly identical performance with lower model complexity
-
-✅ Ridge Regression was selected as the final model due to its robustness and generalization ability.
-
-Model Deployment
-
-The final trained model and polynomial feature transformer were saved using joblib, allowing the model to be reused for future predictions.
-
-Saved files:
-
-AdvertisementModel.joblib
-
-final_polynomial_converter.joblib
